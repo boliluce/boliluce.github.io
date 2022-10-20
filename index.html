@@ -7,11 +7,11 @@
 
 
   <script>
-    function pw_en_testc(e){
+    function login_test(e){
         var id = e
 
         var test = {
-            "params" : id
+            "params" : e // Y면 성공 N이면 실패
         }
 
         var sendData = JSON.stringify(test);
@@ -28,7 +28,11 @@
 <body>
 <p class="p1">Hello World</p>
 
-<input type="password" id="prePw" onclick="pw_en_testc('prePw');" placeholder="기존비밀번호" inputmode="none" onfocus="blur()"/>
+<div class="wrapper" >
+  <input type="button" id="submit" value="로그인" onclick="login_test('Y');"
+         style="padding: 20px 150px 20px 150px; font-size: 3.5em"/>
+</div>
+
 
 </body>
 </html>
