@@ -19,16 +19,8 @@
     }
 
     function handler_test(e){
-        var id = e
-
-        var test = {
-            "params" : e // Y면 성공 N이면 실패
-        }
-
-        var sendData = JSON.stringify(test);
-        window.KBIssueReport.TestFunction(sendData, "test", function(){
-            alert("콜백 함수가 실행되었습니다!");
-        })
+        window.KBIssueReport.TestFunction('imgOnClick');
+        console.log("찍고싶은거");
     }
   </script>
 
