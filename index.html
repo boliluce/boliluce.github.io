@@ -1,50 +1,310 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <title></title>
 
+    <meta name="Generator" content="Cocoa HTML Writer" />
+    <meta name="CocoaVersion" content="2113.3" />
+    <style type="text/css">
+      p.p1 {
+        margin: 0px 0px 0px 0px;
+        font: 12px Helvetica;
+      }
+      #wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
 
-  <script>
-    function login_test(e){
-        var id = e
+      body {
+        font-family: 'Josefin Slab', serif;
+        font-size: 20px;
+        line-height: 24px;
+        color: #333;
+        background: #ececec;
+        overflow-y: scroll;
+      }
 
-        var test = {
-            "params" : e // Y면 성공 N이면 실패
-        }
+      p {
+        margin-bottom: 0.5em;
+      }
 
-        var sendData = JSON.stringify(test);
-        window.KBIssueReport.LoginSuccess(sendData, "")
-    }
+      a,
+      a:visited {
+        text-decoration: none;
+        color: #00ae68;
+      }
 
-    function handler_test(e){
-        window.KBIssueReport.TestFunction('imgOnClick');
-        console.log("찍고싶은거");
-    }
+      .clear {
+        clear: both;
+      }
 
-    function imgOnClick(){
-      console.log("콜백 성공");
-    }
-  </script>
+      .pageTitle {
+        font-size: 2em;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1em;
+        color: #00ae68;
+      }
 
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
-</head>
-<body>
-<p class="p1">Hello World</p>
+      .pageSubTitle {
+        margin-bottom: 0.5em;
+        font-size: 1.3em;
+        font-weight: 700;
+        line-height: 1em;
+        color: #222;
+      }
 
-<div class="wrapper" >
-  <input type="text" id="text1" value="test"/>
-  <input type="button" id="submit" value="로그인" onclick="login_test('Y');"
-         style="padding: 10px 100px 10px 100px; font-size: 3.5em"/>
-  <input type="button" id="handler" value="핸들러" onclick="handler_test('Y');"
-         style="padding: 10px 100px 10px 100px; font-size: 3.5em"/>
-</div>
+      .articleTitle {
+        font-size: 1.15em;
+        font-weight: 700;
+        line-height: 1em;
+        color: #222;
+      }
 
+      .wrapper {
+        width: 600px auto;
+        margin: 20px auto;
+      }
 
-</body>
+      .container {
+        padding-top: 1em;
+        margin-top: 1em;
+        border-top: solid 1px #ccc;
+      }
+
+      a.button {
+        display: block;
+        position: relative;
+        float: left;
+        width: 320px;
+        padding: 0;
+        margin: 10px 20px 10px 0;
+        font-weight: 600;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 0.2s;
+      }
+
+      .btnBlueGreen {
+        background: #00ae68;
+      }
+
+      .btnLightBlue {
+        background: #5dc8cd;
+      }
+
+      .btnOrange {
+        background: #ffaa40;
+      }
+
+      .btnPurple {
+        background: #a74982;
+      }
+
+      /* FADE */
+      .btnFade.btnBlueGreen:hover {
+        background: #21825b;
+      }
+
+      .btnFade.btnLightBlue:hover {
+        background: #01939a;
+      }
+
+      .btnFade.btnOrange:hover {
+        background: #ff8e00;
+      }
+
+      .btnFade.btnPurple:hover {
+        background: #6d184b;
+      }
+
+      /* 3D */
+      .btnBlueGreen.btnPush {
+        box-shadow: 0px 5px 0px 0px #007144;
+      }
+
+      .btnLightBlue.btnPush {
+        box-shadow: 0px 5px 0px 0px #1e8185;
+      }
+
+      .btnOrange.btnPush {
+        box-shadow: 0px 5px 0px 0px #a66615;
+      }
+
+      .btnPurple.btnPush {
+        box-shadow: 0px 5px 0px 0px #6d184b;
+      }
+
+      .btnPush:hover {
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
+      .btnBlueGreen.btnPush:hover {
+        box-shadow: 0px 0px 0px 0px #007144;
+      }
+
+      .btnLightBlue.btnPush:hover {
+        box-shadow: 0px 0px 0px 0px #1e8185;
+      }
+
+      .btnOrange.btnPush:hover {
+        box-shadow: 0px 0px 0px 0px #a66615;
+      }
+
+      .btnPurple.btnPush:hover {
+        box-shadow: 0px 0px 0px 0px #6d184b;
+      }
+
+      /* BORDER */
+      .btnBlueGreen.btnBorder {
+        box-shadow: 0px 0px 0px 0px #21825b;
+      }
+
+      .btnBlueGreen.btnBorder:hover {
+        box-shadow: 0px 0px 0px 5px #21825b;
+      }
+
+      .btnLightBlue.btnBorder {
+        box-shadow: 0px 0px 0px 0px #01939a;
+      }
+
+      .btnLightBlue.btnBorder:hover {
+        box-shadow: 0px 0px 0px 5px #01939a;
+      }
+
+      .btnOrange.btnBorder {
+        box-shadow: 0px 0px 0px 0px #a66615;
+      }
+
+      .btnOrange.btnBorder:hover {
+        box-shadow: 0px 0px 0px 5px #a66615;
+      }
+
+      .btnPurple.btnBorder {
+        box-shadow: 0px 0px 0px 0px #6d184b;
+      }
+
+      .btnPurple.btnBorder:hover {
+        box-shadow: 0px 0px 0px 5px #6d184b;
+      }
+
+      /* FLOAT */
+      .btnFloat {
+        background: none;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+      }
+
+      .btnFloat:before {
+        content: 'Float';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 50px;
+        border-radius: 5px;
+        transition: all 0.2s;
+      }
+
+      .btnBlueGreen.btnFloat:before {
+        background: #00ae68;
+      }
+
+      .btnLightBlue.btnFloat:before {
+        background: #5dc8cd;
+      }
+
+      .btnOrange.btnFloat:before {
+        background: #ffaa40;
+      }
+
+      .btnPurple.btnFloat:before {
+        background: #8d336a;
+      }
+
+      .btnFloat:before {
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.4);
+      }
+
+      .btnFloat:hover:before {
+      }
+
+      .btnFloat:hover:before {
+        margin-top: -2px;
+        margin-left: 0px;
+        transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25);
+      }
+
+      /* SLIDE */
+      .btnSlide.btnBlueGreen {
+        background: 0;
+      }
+
+      .btnSlide .top {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 120px;
+        height: 50px;
+        background: #00ae68;
+        z-index: 10;
+        transition: all 0.2s;
+        border-radius: 5px;
+      }
+
+      .btnSlide.btnBlueGreen .top {
+        background: #00ae68;
+      }
+
+      .btnSlide.btnLightBlue .top {
+        background: #5dc8cd;
+      }
+
+      .btnSlide.btnOrange .top {
+        background: #ffaa40;
+      }
+
+      .btnSlide.btnPurple .top {
+        background: #a74982;
+      }
+
+      .btnSlide .bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 50px;
+        color: #000;
+        z-index: 5;
+        border-radius: 5px;
+      }
+
+      .btnSlide:hover .top {
+        top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="center">
+        <a
+          href="APK/YachtBoard-release-1.0.0.apk"
+          download=""
+          class="button btnPush btnOrange"
+          >YachtBoard 1.0.0 다운로드</a
+        >
+      </div>
+    </div>
+    <!-- //wrap -->
+  </body>
 </html>
